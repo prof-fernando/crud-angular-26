@@ -1,1 +1,26 @@
-<p>produto-form works!</p>
+<form [formGroup]="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Nome:</mat-label>
+    <input matInput placeholder="informe o nome" formControlName="nome" />
+    <mat-error> Campo obrigatório </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Preço:</mat-label>
+    <input matInput type="number" placeholder="R$ 0,00" formControlName="preco" />
+    <mat-error> Campo obrigatório </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Cor:</mat-label>
+    <input type="color" matInput laceholder="informe a cor do produto" formControlName="cor" />
+    <mat-error> Campo obrigatório </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>imagem:</mat-label>
+    <input matInput placeholder="informe url da imagem" formControlName="imagem" />
+  </mat-form-field>
+
+  <mat-divider></mat-divider>
+  <button matButton="filled" (click)="salvar()">Salvar</button>
+</form>
